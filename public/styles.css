@@ -10,15 +10,7 @@ body, html {
   overflow-x: hidden;
 }
 
-.parallax {
-  height: 100vh;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
 #login-section {
-  background-image: url('https://picsum.photos/seed/secure/1920/1080');
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,20 +42,6 @@ body, html {
 
 .login-box button:hover {
   background: #45a049;
-}
-
-#unlocked-section {
-  background-image: url('https://picsum.photos/seed/unlocked/1920/1080');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.unlocked-box {
-  background: rgba(255,255,255,0.8);
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
 }
 
 #error-msg {
