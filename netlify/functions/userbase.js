@@ -17,8 +17,7 @@ exports.handler = async (event) => {
     }
 
     const users = {
-        "john123": { password: "password123", passkey: "abc123" },
-        "jane456": { password: "secure456", passkey: "def456" }
+        "lb": { password: "abc", passkey: "123" },
     };
 
     const user = users[id];
