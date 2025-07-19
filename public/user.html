@@ -5,7 +5,9 @@
 	<title>User Dashboard</title>
 </head>
 <body>
-	<h1 id="welcome-msg"></h1>
+	<section id="hidden" style="display='none'">
+		<h1 id="welcome-msg"></h1>
+	</section>
 	<div id="error-msg" style="color: red;"></div>
 
 	<script>
@@ -18,10 +20,11 @@
 		const userFromStorage = localStorage.getItem('user');
 
 		if (!userFromUrl || !userFromStorage || userFromUrl !== userFromStorage) {
-			document.getElementById('error-msg').textContent = "Access denied. Invalid user.";
-			setTimeout(() => window.location.href = '/', 2000);  // Redirect to login after 2 seconds
+			document.getElementById('error-msg').textContent = "access denied, redirecting...";
+			setTimeout(() => window.location.href = '/', 2000);
 		} else {
-			document.getElementById('welcome-msg').textContent = `Welcome, ${userFromUrl}!`;
+			document.getElementById("hidden").style.display = "block";
+			document.getElementById('welcome-msg').textContent = `welcome, ${userFromUrl}!`;
 		}
 	</script>
 </body>
