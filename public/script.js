@@ -6,8 +6,7 @@ async function postData() {
 	const passkey = document.getElementById('passkey').value.trim();
 
 	if (!id || !password || !passkey) {
-		errorMsg.textContent = "All fields are required.";
-		return false;
+		return "all fields are required.";
 	}
 
 	try {
@@ -27,21 +26,20 @@ async function postData() {
 		return responseData || false;
 	} catch (error) {
 		console.error('Error:', error);
-		return false;
+		return "internal error.";
 	}
 }
 
 async function handleSubmit() {
-	const success = await postData();
-	if (success) {
+	const returned = await postData();
+	if (returned == true) {
 		localStorage.setItem('user', document.getElementById('userId').value.trim());
 		document.location.href = `/user?individual=${encodeURIComponent(document.getElementById('userId').value.trim())}`;
 	} else {
-		errorMsg.textContent = "Incorrect.";
+		errorMsg.textContent = returned;
 	}
 }
 
-// Call handleSubmit on form submission
 document.getElementById('submit-btn').addEventListener('click', (e) => {
 	e.preventDefault();
 	handleSubmit();
