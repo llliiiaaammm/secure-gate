@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#login-section {
+  background-image: url('https://picsum.photos/seed/secure/1920/1080');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.login-box input {
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  width: 200px;
+}
+
+.login-box button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #45a049;
+}
+
+#unlocked-section {
+  background-image: url('https://picsum.photos/seed/unlocked/1920/1080');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unlocked-box {
+  background: rgba(255,255,255,0.8);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#error-msg {
+  color: red;
+  margin-top: 10px;
+}
